@@ -7,6 +7,7 @@ Clone the code from the repository:
 
 ## Step 2: Install dependencies
 The application uses the ```psutil``` and ```Flask```, Plotly, boto3 libraries. Install them using pip:
+
 ```pip3 install -r requirements.txt```
 
 ## Step 3: Run the application
