@@ -1,6 +1,6 @@
 # Monitoring-Tool
 
-Step 1: Clone the code
+```Step 1: Clone the code
 Clone the code from the repository:
 
 ```git clone <repository_url>```
@@ -143,4 +143,4 @@ kubectl get service -n default (check service)
 kubectl get pods -n default (to check the pods)
 Once your pod is up and running, run the port-forward to expose the service
 
-kubectl port-forward service/<service_name> 5000:5000
+kubectl port-forward service/<service_name> 5000:5000```
