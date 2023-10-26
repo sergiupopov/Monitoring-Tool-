@@ -6,21 +6,21 @@ Clone the code from the repository:
 ```git clone <repository_url>```
 
 Step 2: Install dependencies
-The application uses the psutil and Flask, Plotly, boto3 libraries. Install them using pip:
+The application uses the ```psutil``` and ```Flask```, Plotly, boto3 libraries. Install them using pip:
 
-pip3 install -r requirements.txt
+```pip3 install -r requirements.txt```
 Step 3: Run the application
 To run the application, navigate to the root directory of the project and execute the following command:
 
-python3 app.py
-This will start the Flask server on localhost:5000. Navigate to http://localhost:5000/ on your browser to access the application.
+```python3 app.py```
+This will start the Flask server on ```localhost:5000```. Navigate to http://localhost:5000/ on your browser to access the application.
 
-Part 2: Dockerizing the Flask application
+***Part 2: Dockerizing the Flask application***
 Step 1: Create a Dockerfile
 Create a Dockerfile in the root directory of the project with the following contents:
 
 # Use the official Python image as the base image
-FROM python:3.9-slim-buster
+```FROM python:3.9-slim-buster```
 
 # Set the working directory in the container
 WORKDIR /app
