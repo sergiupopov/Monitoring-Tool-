@@ -3,7 +3,7 @@
 ## Step 1: Clone the code
 Clone the code from the repository:
 
-```git clone <repository_url>```
+* ```git clone <repository_url>```
 
 ## Step 2: Install dependencies
 The application uses the ```psutil``` and ```Flask```, Plotly, boto3 libraries. Install them using pip:
