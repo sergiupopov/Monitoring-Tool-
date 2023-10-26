@@ -1,4 +1,5 @@
 # Monitoring-Tool
+## Part 1: Deploying the Flask application locally
 
 ## Step 1: Clone the code
 Clone the code from the repository:
@@ -18,8 +19,7 @@ To run the application, navigate to the root directory of the project and execut
 ```
 This will start the Flask server on ```localhost:5000```. Navigate to http://localhost:5000/ on your browser to access the application.
 
-### *Part 2: Dockerizing the Flask application
-
+### Part 2: Dockerizing the Flask application
 ## Step 1: Create a Dockerfile
 Create a Dockerfile in the root directory of the project with the following contents:
 
