@@ -50,18 +50,23 @@ EXPOSE 5000
 # Start the Flask app when the container is run
 CMD ["flask", "run"]
 ```
-Step 2: Build the Docker image
+## Step 2: Build the Docker image
+
 To build the Docker image, execute the following command:
+```
+ docker build -t <image_name> .
+```
+## Step 3: Run the Docker container
 
-docker build -t <image_name> .
-Step 3: Run the Docker container
 To run the Docker container, execute the following command:
+```
+ docker run -p 5000:5000 <image_name>
+```
+This will start the Flask server in a Docker container on ```localhost:5000```. Navigate to http://localhost:5000/ on your browser to access the application.
 
-docker run -p 5000:5000 <image_name>
-This will start the Flask server in a Docker container on localhost:5000. Navigate to http://localhost:5000/ on your browser to access the application.
+# Part 3: Pushing the Docker image to ECR
 
-Part 3: Pushing the Docker image to ECR
-Step 1: Create an ECR repository
+## Step 1: Create an ECR repository
 Create an ECR repository using Python:
 
 import boto3
