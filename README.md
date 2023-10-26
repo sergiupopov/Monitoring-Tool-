@@ -1,6 +1,6 @@
 # Monitoring-Tool
 
-#Step 1: Clone the code
+# Step 1: Clone the code
 Clone the code from the repository:
 
 ```git clone <repository_url>```
