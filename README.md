@@ -1,5 +1,6 @@
 # Monitoring-Tool
-## Part 1: Deploying the Flask application locally
+
+# Part 1: Deploying the Flask application locally
 
 ## Step 1: Clone the code
 Clone the code from the repository:
