@@ -68,7 +68,7 @@ This will start the Flask server in a Docker container on ```localhost:5000```. 
 
 ## Step 1: Create an ECR repository
 Create an ECR repository using Python:
-
+```
 import boto3
 
 # Create an ECR client
@@ -81,18 +81,23 @@ response = ecr_client.create_repository(repositoryName=repository_name)
 # Print the repository URI
 repository_uri = response['repository']['repositoryUri']
 print(repository_uri)
-Step 2: Push the Docker image to ECR
+```
+## Step 2: Push the Docker image to ECR
 Push the Docker image to ECR using the push commands on the console:
+```
+ docker push <ecr_repo_uri>:<tag>
+```
 
-docker push <ecr_repo_uri>:<tag>
-Part 4: Creating an EKS cluster and deploying the app using Python
-Step 1: Create an EKS cluster
+# Part 4: Creating an EKS cluster and deploying the app using Python
+
+## Step 1: Create an EKS cluster
 Create an EKS cluster and add node group
 
-Step 2: Create a node group
+## Step 2: Create a node group
 Create a node group in the EKS cluster.
 
-Step 3: Create deployment and service
+## Step 3: Create deployment and service
+```
 from kubernetes import client, config
 
 # Load Kubernetes configuration
@@ -148,13 +153,17 @@ api_instance.create_namespaced_service(
     namespace="default",
     body=service
 )
+```
 make sure to edit the name of the image on line 25 with your image Uri.
 
-Once you run this file by running “python3 eks.py” deployment and service will be created.
-Check by running following commands:
+* Once you run this file by running “python3 eks.py” deployment and service will be created.
+* Check by running following commands:
+```
 kubectl get deployment -n default (check deployments)
 kubectl get service -n default (check service)
 kubectl get pods -n default (to check the pods)
+```
 Once your pod is up and running, run the port-forward to expose the service
-
-kubectl port-forward service/<service_name> 5000:5000```
+```
+kubectl port-forward service/<service_name> 5000:5000
+```
